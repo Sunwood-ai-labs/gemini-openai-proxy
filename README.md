@@ -1,5 +1,5 @@
 <h1>
-<img src="[https://raw.githubusercontent.com/Sunwood-ai-labs/EmoVoiceMirror/main/docs/icon_cat2.png](https://raw.githubusercontent.com/Sunwood-ai-labs/gemini-openai-proxy/main/docs/geminicat.png)" height=300px align="right"/>
+<img src="https://raw.githubusercontent.com/Sunwood-ai-labs/gemini-openai-proxy/main/docs/geminicat.png" height=300px align="right"/>
 Gemini-OpenAI-Proxy
 </h1>
 
