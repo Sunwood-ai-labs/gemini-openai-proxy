@@ -7,12 +7,6 @@ Gemini-OpenAI-Proxyは、OpenAI APIプロトコルをGoogle Gemini Proプロト�
 
 
 
----
-
-
-Gemini-OpenAI-Proxyは、OpenAI APIプロトコルをGoogle Gemini Proプロトコルに変換するためのプロキシです。これにより、Gemini Proプロトコルを使用するアプリケーションにOpenAIが提供する機能をシームレスに統合することが可能になります。
-
-
 ## デプロイ
 
 ### Docker版
