@@ -1,6 +1,11 @@
-# Gemini-OpenAI-Proxy
+<h1>
+<img src="https://raw.githubusercontent.com/Sunwood-ai-labs/EmoVoiceMirror/main/docs/icon_cat2.png" height=300px align="right"/>
+Gemini-OpenAI-Proxy
+</h1>
 
 Gemini-OpenAI-Proxy is a proxy designed to convert the OpenAI API protocol to the Google Gemini Pro protocol. This enables seamless integration of OpenAI-powered functionalities into applications using the Gemini Pro protocol.
+
+
 
 ---
 
