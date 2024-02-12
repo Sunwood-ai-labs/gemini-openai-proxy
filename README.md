@@ -87,6 +87,10 @@ OpenAIからのレスポンスを処理するのと同じ方法で、Gemini-Open
 
 以下は、Gemini-OpenAI-Proxyを使用してOpenAI機能をテストするためのPythonスクリプト例です。あなたのGoogle AI Studio APIキーを設定し、リクエストを送信してレスポンスを確認してください。
 
+#### chat task
+
+`demo/demo_chat.py`
+
 ```python
 import requests
 
@@ -109,7 +113,9 @@ response = requests.post(url, json=data, headers=headers)
 print(response.text)
 ```
 
+#### vision task
 
+`demo\demo_vision.py`
 
 ```python
 import requests
@@ -150,6 +156,8 @@ print(response.text)
 
 
 ### OpenAI Python API
+
+`demo/demo_python.ipynb`
 
 #### setting
 
