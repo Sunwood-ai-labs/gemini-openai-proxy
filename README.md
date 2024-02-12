@@ -83,6 +83,8 @@ OpenAIからのレスポンスを処理するのと同じ方法で、Gemini-Open
 
 ## デモスクリプト
 
+### Post Requests
+
 以下は、Gemini-OpenAI-Proxyを使用してOpenAI機能をテストするためのPythonスクリプト例です。あなたのGoogle AI Studio APIキーを設定し、リクエストを送信してレスポンスを確認してください。
 
 ```python
@@ -144,3 +146,77 @@ response = requests.post(url, json=data, headers=headers)
 
 print(response.text)
 ```
+
+
+
+### OpenAI Python API
+
+#### setting
+
+```python
+
+from IPython.display import display, Image, Audio
+
+import cv2  # We're using OpenCV to read video, to install !pip install opencv-python
+import base64
+import time
+import os
+import requests
+import openai
+
+YOUR_GOOGLE_AI_STUDIO_API_KEY = "XXXXXXXXXXXXXXXXXXXXXX"
+
+from openai import OpenAI
+import httpx
+client = OpenAI(api_key = YOUR_GOOGLE_AI_STUDIO_API_KEY)
+
+base_url = httpx.URL("http://localhost:8080/v1/")
+client._base_url= base_url
+
+```
+
+
+#### vision task
+
+```python
+
+response = client.chat.completions.create(
+  model="gpt-4-vision-preview",
+  messages=[
+    {
+      "role": "user",
+      "content": [
+        {"type": "text", "text": "What’s in this image?"},
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gfp-wisconsin-madison-the-nature-boardwalk.jpg/2560px-Gfp-wisconsin-madison-the-nature-boardwalk.jpg",
+          },
+        },
+      ],
+    }
+  ],
+  max_tokens=300,
+)
+
+print(response.choices[0])
+```
+
+>Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content=' The image shows a boardwalk through a lush green field on a bright day with blue skies.', role='assistant', function_call=None, tool_calls=None))
+
+#### chat task
+
+```python
+
+completion = client.chat.completions.create(
+  model="gpt-3.5-turbo",
+  messages=[
+    {"role": "system", "content": "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair."},
+    {"role": "user", "content": "Compose a poem that explains the concept of recursion in programming."}
+  ]
+)
+
+print(completion.choices[0].message)
+```
+
+>ChatCompletionMessage(content="In the realm of code, where logic weaves,\nRecursion's dance, a concept that cleaves.\nA function, bold, within itself it calls,\nTo unravel problems, breaking down their walls.\n\nLike Russian dolls, it delves within,\nEach layer solved, new challenges begin.\nWith grace and skill, it solves its own,\nRevealing patterns, elegantly grown.\n\nA fractal's charm, in code expressed,\nRepeating patterns, echoes intertwined, suggest\nA tapestry of logic, intricate and grand,\nRecursion's power, ever in demand.\n\nFrom sorting lists to solving mazes vast,\nRecursion's touch, a marvel unsurpassed.\nIt climbs the tree, or searches deep,\nIts elegance, a programmer's keep.\n\nYet caution whispers, lest we stray,\nFor infinite loops, a treacherous way.\nWith care we tread, and boundaries define,\nTo tame recursion's power, so divine.\n\nSo let us marvel at this tool so grand,\nRecursion's dance, a symphony unplanned.\nIn the realm of code, it weaves its spell,\nA marvel of logic, stories untold, it tells.", role='assistant', function_call=None, tool_calls=None)
