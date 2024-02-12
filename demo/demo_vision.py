@@ -1,7 +1,7 @@
 import requests
 
 # あなたのGoogle AI Studio APIキーをここに設定してください
-YOUR_GOOGLE_AI_STUDIO_API_KEY = "XXXXXXXXXXXXXXXXXXXXXXXX"
+YOUR_GOOGLE_AI_STUDIO_API_KEY = "AIzaSyA6SW3VQhYkHZhDJpU2kfHf15ATH9lYwTE"
 
 url = "http://localhost:8080/v1/chat/completions"
 headers = {
