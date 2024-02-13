@@ -228,3 +228,13 @@ print(completion.choices[0].message)
 ```
 
 >ChatCompletionMessage(content="In the realm of code, where logic weaves,\nRecursion's dance, a concept that cleaves.\nA function, bold, within itself it calls,\nTo unravel problems, breaking down their walls.\n\nLike Russian dolls, it delves within,\nEach layer solved, new challenges begin.\nWith grace and skill, it solves its own,\nRevealing patterns, elegantly grown.\n\nA fractal's charm, in code expressed,\nRepeating patterns, echoes intertwined, suggest\nA tapestry of logic, intricate and grand,\nRecursion's power, ever in demand.\n\nFrom sorting lists to solving mazes vast,\nRecursion's touch, a marvel unsurpassed.\nIt climbs the tree, or searches deep,\nIts elegance, a programmer's keep.\n\nYet caution whispers, lest we stray,\nFor infinite loops, a treacherous way.\nWith care we tread, and boundaries define,\nTo tame recursion's power, so divine.\n\nSo let us marvel at this tool so grand,\nRecursion's dance, a symphony unplanned.\nIn the realm of code, it weaves its spell,\nA marvel of logic, stories untold, it tells.", role='assistant', function_call=None, tool_calls=None)
+
+
+
+
+### OpenAI Python API (Local image)
+
+`demo\demo_vision_local_Single_img.py`
+
+`demo\demo_vision_local_Multiple_img.py`
+
