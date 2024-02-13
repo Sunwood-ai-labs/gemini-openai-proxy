@@ -1,7 +1,16 @@
+import base64
 import requests
+import os
+from dotenv import load_dotenv
 
-# あなたのGoogle AI Studio APIキーをここに設定してください
-YOUR_GOOGLE_AI_STUDIO_API_KEY = "AIzaSyA6SW3VQhYkHZhDJpU2kfHf15ATH9lYwTE"
+# .envファイルから環境変数を読み込む
+load_dotenv()
+
+# .envファイルからAPIキーを読み込む
+YOUR_GOOGLE_AI_STUDIO_API_KEY = os.getenv("GOOGLE_AI_STUDIO_API_KEY")
+# or 
+# YOUR_GOOGLE_AI_STUDIO_API_KEY = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
 
 url = "http://localhost:8080/v1/chat/completions"
 headers = {
