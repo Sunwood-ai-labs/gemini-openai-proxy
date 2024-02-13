@@ -22,3 +22,5 @@ go.work
 .vscode
 .env
 data/Bouldering.mp4
+**/**.ipynb_checkpoints**.ipynb
+demo/.ipynb_checkpoints/
