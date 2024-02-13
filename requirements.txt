@@ -1,0 +1,7 @@
+openai
+requests
+opencv-python
+httpx
+pillow
+python-dotenv
+notebook
