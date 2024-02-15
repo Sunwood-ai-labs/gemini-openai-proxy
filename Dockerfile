@@ -9,6 +9,5 @@ RUN cp gemini /tmp/app && chmod +x /tmp/app/gemini
 
 FROM debian:bookworm-slim
 COPY --from=builder /tmp/app /app
-RUN apt-get update -y && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/* && update-ca-certificates
-
+RUN apt-get update -y && apt-get install -y ca-certificates iputils-ping net-tools dnsutils curl && rm -rf /var/lib/apt/lists/* && update-ca-certificates
 CMD ["/app/gemini"]
