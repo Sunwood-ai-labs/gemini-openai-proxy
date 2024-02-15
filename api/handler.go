@@ -16,7 +16,7 @@ import (
 
 func IndexHandler(c *gin.Context) {
 	c.JSON(http.StatusMisdirectedRequest, gin.H{
-		"message": "Welcome to the OpenAI API! Documentation is available at https://platform.openai.com/docs/api-reference",
+		"message": "Welcome to the Gemini-Openai-Proxy! Documentation is available at https://platform.openai.com/docs/api-reference",
 	})
 }
 
