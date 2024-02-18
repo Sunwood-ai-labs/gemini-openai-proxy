@@ -1,0 +1,26 @@
+{
+  "store": {
+    "name": "コスモ石油株式会社（株）東部カンパニーセルフ"
+  },
+  "transaction": {
+    "date": "2024年01月10日",
+    "time": "22時32分"
+  },
+  "items": [
+    {
+      "item_name": "レギュラーガソリンＰＯ７",
+      "unit_price": 166,
+      "quantity": 18.08,
+      "unit": "L",
+      "total_price": 3000
+    }
+  ],
+  "total": {
+    "amount": 3000,
+    "points_earned": 1,
+    "points_used": 0
+  },
+  "payment": {
+    "payment_method": "WAON POINT"
+  }
+}
