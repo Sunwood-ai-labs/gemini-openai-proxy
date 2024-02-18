@@ -6,7 +6,7 @@ services:
       - "8080:8080"
     restart: always
 
-networks:
-  default:
-    external:
-      name: gemini-openai-proxy-network
+# networks:
+#   default:
+#     external:
+#       name: gemini-openai-proxy-network
